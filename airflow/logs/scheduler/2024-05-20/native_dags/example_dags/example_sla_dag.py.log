@@ -1,0 +1,11 @@
+[2024-05-20T12:21:46.138+0530] {processor.py:161} INFO - Started process (PID=21649) to work on /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_sla_dag.py
+[2024-05-20T12:21:46.138+0530] {processor.py:830} INFO - Processing file /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2024-05-20T12:21:46.139+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.139+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_sla_dag.py
+[2024-05-20T12:21:46.163+0530] {processor.py:840} INFO - DAG(s) 'example_sla_dag' retrieved from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_sla_dag.py
+[2024-05-20T12:21:46.327+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.326+0530] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_sla_dag
+[2024-05-20T12:21:46.373+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.373+0530] {override.py:1829} INFO - Created Permission View: can read on DAG:example_sla_dag
+[2024-05-20T12:21:46.419+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.418+0530] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_sla_dag
+[2024-05-20T12:21:46.419+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.419+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-20T12:21:46.424+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.424+0530] {dag.py:3118} INFO - Creating ORM DAG for example_sla_dag
+[2024-05-20T12:21:46.431+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.430+0530] {dag.py:3954} INFO - Setting next_dagrun for example_sla_dag to 2024-05-20 06:48:00+00:00, run_after=2024-05-20 06:50:00+00:00
+[2024-05-20T12:21:46.493+0530] {processor.py:183} INFO - Processing /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_sla_dag.py took 0.359 seconds

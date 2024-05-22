@@ -1,0 +1,47 @@
+[2024-05-21T14:45:54.260+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-21T14:45:54.276+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.transform_task manual__2024-05-21T09:12:34.180878+00:00 [queued]>
+[2024-05-21T14:45:54.279+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.transform_task manual__2024-05-21T09:12:34.180878+00:00 [queued]>
+[2024-05-21T14:45:54.279+0530] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-05-21T14:45:54.368+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): transform_task> on 2024-05-21 09:12:34.180878+00:00
+[2024-05-21T14:45:54.372+0530] {standard_task_runner.py:63} INFO - Started process 62688 to run task
+[2024-05-21T14:45:54.374+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_dag', 'transform_task', 'manual__2024-05-21T09:12:34.180878+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp0220718x']
+[2024-05-21T14:45:54.374+0530] {standard_task_runner.py:91} INFO - Job 30: Subtask transform_task
+[2024-05-21T14:45:54.479+0530] {task_command.py:426} INFO - Running <TaskInstance: etl_dag.transform_task manual__2024-05-21T09:12:34.180878+00:00 [running]> on host prince-5192
+[2024-05-21T14:45:54.672+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='prince.yadav@tothenew.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='transform_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-21T09:12:34.180878+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-21T09:12:34.180878+00:00'
+[2024-05-21T14:45:54.672+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-21T14:45:54.680+0530] {logging_mixin.py:188} INFO - /////////////////// 	 Pulling Data from xcomm 	///////////////////////////
+[2024-05-21T14:45:54.692+0530] {logging_mixin.py:188} INFO - /////////////////// 	 Reading Data	///////////////////////////
+[2024-05-21T14:45:54.710+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-21T14:45:54.711+0530] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/prince/airflow-workspace/airflow/scripts/transform.py", line 10, in transform_data
+    df = pd.read_csv(io.BytesIO(raw_data))
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf8 in position 115811: invalid start byte
+[2024-05-21T14:45:55.034+0530] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_dag, task_id=transform_task, run_id=manual__2024-05-21T09:12:34.180878+00:00, execution_date=20240521T091234, start_date=20240521T091554, end_date=20240521T091555
+[2024-05-21T14:45:55.130+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 30 for task transform_task ('utf-8' codec can't decode byte 0xf8 in position 115811: invalid start byte; 62688)
+[2024-05-21T14:45:55.147+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-05-21T14:45:55.158+0530] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-21T14:45:55.158+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,23 @@
+[2024-05-21T16:26:36.094+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-21T16:26:36.109+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.load_task manual__2024-05-21T09:12:34.180878+00:00 [queued]>
+[2024-05-21T16:26:36.112+0530] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.load_task manual__2024-05-21T09:12:34.180878+00:00 [queued]>
+[2024-05-21T16:26:36.113+0530] {taskinstance.py:2306} INFO - Starting attempt 3 of 4
+[2024-05-21T16:26:36.170+0530] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_task> on 2024-05-21 09:12:34.180878+00:00
+[2024-05-21T16:26:36.175+0530] {standard_task_runner.py:63} INFO - Started process 92167 to run task
+[2024-05-21T16:26:36.177+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_dag', 'load_task', 'manual__2024-05-21T09:12:34.180878+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp_xsdi0hl']
+[2024-05-21T16:26:36.178+0530] {standard_task_runner.py:91} INFO - Job 54: Subtask load_task
+[2024-05-21T16:26:36.250+0530] {task_command.py:426} INFO - Running <TaskInstance: etl_dag.load_task manual__2024-05-21T09:12:34.180878+00:00 [running]> on host prince-5192
+[2024-05-21T16:26:36.346+0530] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='prince.yadav@tothenew.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='load_task' AIRFLOW_CTX_EXECUTION_DATE='2024-05-21T09:12:34.180878+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-21T09:12:34.180878+00:00'
+[2024-05-21T16:26:36.346+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-21T16:26:36.356+0530] {logging_mixin.py:188} INFO - /////////////////// 	 Loading started 	///////////////////////////
+[2024-05-21T16:26:36.356+0530] {logging_mixin.py:188} INFO - /////////////////// 	 Pulling data from xcomm 	///////////////////////////
+[2024-05-21T16:26:36.361+0530] {logging_mixin.py:188} INFO - /////////////////// 	 Making connection to s3 	///////////////////////////
+[2024-05-21T16:26:36.370+0530] {base.py:84} INFO - Using connection ID 'aws_default' for task execution.
+[2024-05-21T16:26:36.371+0530] {connection_wrapper.py:384} INFO - AWS Connection (conn_id='aws_default', conn_type='aws') credentials retrieved from login and password.
+[2024-05-21T16:27:04.388+0530] {logging_mixin.py:188} INFO - /////////////////// 	 Data Saved to S3 Bucket	///////////////////////////
+[2024-05-21T16:27:04.389+0530] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-21T16:27:04.389+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-21T16:27:04.392+0530] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=load_task, run_id=manual__2024-05-21T09:12:34.180878+00:00, execution_date=20240521T091234, start_date=20240521T105636, end_date=20240521T105704
+[2024-05-21T16:27:04.476+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-21T16:27:04.483+0530] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-05-21T16:27:04.529+0530] {local_task_job_runner.py:222} INFO - ::endgroup::

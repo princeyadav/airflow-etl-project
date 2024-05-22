@@ -1,0 +1,11 @@
+[2024-05-20T12:21:46.719+0530] {processor.py:161} INFO - Started process (PID=21650) to work on /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-05-20T12:21:46.719+0530] {processor.py:830} INFO - Processing file /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2024-05-20T12:21:46.720+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.720+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-05-20T12:21:46.725+0530] {processor.py:840} INFO - DAG(s) 'example_trigger_target_dag' retrieved from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-05-20T12:21:46.868+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.867+0530] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_trigger_target_dag
+[2024-05-20T12:21:46.913+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.913+0530] {override.py:1829} INFO - Created Permission View: can read on DAG:example_trigger_target_dag
+[2024-05-20T12:21:46.958+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.958+0530] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_trigger_target_dag
+[2024-05-20T12:21:46.959+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.958+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-20T12:21:46.965+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.965+0530] {dag.py:3118} INFO - Creating ORM DAG for example_trigger_target_dag
+[2024-05-20T12:21:46.965+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:46.965+0530] {dag.py:3954} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2024-05-20T12:21:47.132+0530] {processor.py:183} INFO - Processing /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.417 seconds

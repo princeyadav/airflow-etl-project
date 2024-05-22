@@ -1,0 +1,11 @@
+[2024-05-20T12:21:35.560+0530] {processor.py:161} INFO - Started process (PID=21596) to work on /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2024-05-20T12:21:35.560+0530] {processor.py:830} INFO - Processing file /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_controller_dag.py for tasks to queue
+[2024-05-20T12:21:35.561+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.561+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2024-05-20T12:21:35.565+0530] {processor.py:840} INFO - DAG(s) 'example_trigger_controller_dag' retrieved from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+[2024-05-20T12:21:35.850+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.850+0530] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_trigger_controller_dag
+[2024-05-20T12:21:35.897+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.896+0530] {override.py:1829} INFO - Created Permission View: can read on DAG:example_trigger_controller_dag
+[2024-05-20T12:21:35.965+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.964+0530] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_trigger_controller_dag
+[2024-05-20T12:21:35.965+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.965+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-20T12:21:35.970+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.970+0530] {dag.py:3118} INFO - Creating ORM DAG for example_trigger_controller_dag
+[2024-05-20T12:21:35.975+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:35.975+0530] {dag.py:3954} INFO - Setting next_dagrun for example_trigger_controller_dag to 2021-01-01 00:00:00+00:00, run_after=2021-01-01 00:00:00+00:00
+[2024-05-20T12:21:36.030+0530] {processor.py:183} INFO - Processing /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_trigger_controller_dag.py took 0.474 seconds

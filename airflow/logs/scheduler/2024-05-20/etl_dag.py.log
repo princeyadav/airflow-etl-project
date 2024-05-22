@@ -1,0 +1,14 @@
+[2024-05-20T12:21:25.647+0530] {processor.py:161} INFO - Started process (PID=21519) to work on /home/prince/airflow-workspace/airflow/dags/etl_dag.py
+[2024-05-20T12:21:25.648+0530] {processor.py:830} INFO - Processing file /home/prince/airflow-workspace/airflow/dags/etl_dag.py for tasks to queue
+[2024-05-20T12:21:25.649+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:25.648+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/prince/airflow-workspace/airflow/dags/etl_dag.py
+[2024-05-20T12:21:25.651+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:25.651+0530] {dagbag.py:355} ERROR - Failed to import: /home/prince/airflow-workspace/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/prince/airflow-workspace/airflow/dags/etl_dag.py", line 8, in <module>
+    from scripts.extract import extract_from_s3
+ModuleNotFoundError: No module named 'scripts'
+[2024-05-20T12:21:25.651+0530] {processor.py:842} WARNING - No viable dags retrieved from /home/prince/airflow-workspace/airflow/dags/etl_dag.py
+[2024-05-20T12:21:25.708+0530] {processor.py:183} INFO - Processing /home/prince/airflow-workspace/airflow/dags/etl_dag.py took 0.064 seconds

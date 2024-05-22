@@ -1,0 +1,11 @@
+[2024-05-20T12:21:49.729+0530] {processor.py:161} INFO - Started process (PID=21656) to work on /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-05-20T12:21:49.730+0530] {processor.py:830} INFO - Processing file /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2024-05-20T12:21:49.731+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.730+0530] {dagbag.py:545} INFO - Filling up the DagBag from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-05-20T12:21:49.734+0530] {processor.py:840} INFO - DAG(s) 'example_task_group' retrieved from /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-05-20T12:21:49.889+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.889+0530] {override.py:1829} INFO - Created Permission View: can edit on DAG:example_task_group
+[2024-05-20T12:21:49.935+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.934+0530] {override.py:1829} INFO - Created Permission View: can read on DAG:example_task_group
+[2024-05-20T12:21:49.980+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.979+0530] {override.py:1829} INFO - Created Permission View: can delete on DAG:example_task_group
+[2024-05-20T12:21:49.980+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.980+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-05-20T12:21:49.987+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.986+0530] {dag.py:3118} INFO - Creating ORM DAG for example_task_group
+[2024-05-20T12:21:49.991+0530] {logging_mixin.py:188} INFO - [2024-05-20T12:21:49.991+0530] {dag.py:3954} INFO - Setting next_dagrun for example_task_group to 2024-05-19 00:00:00+00:00, run_after=2024-05-20 00:00:00+00:00
+[2024-05-20T12:21:50.067+0530] {processor.py:183} INFO - Processing /home/prince/airflow-workspace/env/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py took 0.341 seconds
